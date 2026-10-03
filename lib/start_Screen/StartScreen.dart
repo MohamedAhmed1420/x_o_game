@@ -7,94 +7,101 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [AppColors.lightBlue, AppColors.blue],
-          end: Alignment.bottomCenter,
+    return SafeArea(
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [AppColors.lightBlue, AppColors.blue],
+            end: Alignment.bottomCenter,
+          ),
         ),
-      ),
 
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: SafeArea(
-          child: Column(
-            children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image(image: AssetImage('assets/images/o_x.png')),
-                  Text(
-                    "Tix-Tac-Toe",
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.w900,
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SafeArea(
+            child: Column(
+              children: [
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image(image: AssetImage('assets/images/o_x.png')),
+                    Text(
+                      "Tix-Tac-Toe",
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.w900,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Pick who goes first?",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.white,
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Pick who goes first?",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.white,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Gameplay()),
-                          );
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(40),
-                          width: 164,
-                          height: 164,
-                          decoration: BoxDecoration(
-                            color: AppColors.white,
-                            borderRadius: BorderRadius.circular(32),
-                          ),
-                          child: Image(
-                            image: AssetImage('assets/images/x.png'),
+                    SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Gameplay(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(40),
+                            width: 164,
+                            height: 164,
+                            decoration: BoxDecoration(
+                              color: AppColors.white,
+                              borderRadius: BorderRadius.circular(32),
+                            ),
+                            child: Image(
+                              image: AssetImage('assets/images/x.png'),
+                            ),
                           ),
                         ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Gameplay()),
-                          );
-                        },
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Gameplay(),
+                              ),
+                            );
+                          },
 
+                          child: Container(
+                            padding: EdgeInsets.all(40),
+                            width: 164,
+                            height: 164,
+                            decoration: BoxDecoration(
+                              color: AppColors.white,
+                              borderRadius: BorderRadius.circular(32),
+                            ),
 
-                        child: Container(
-                          padding: EdgeInsets.all(40),
-                          width: 164,
-                          height: 164,
-                          decoration: BoxDecoration(
-                            color: AppColors.white,
-                            borderRadius: BorderRadius.circular(32),
+                            child: Image(
+                              image: AssetImage('assets/images/o.png'),
+                            ),
                           ),
-
-                          child: Image(image: AssetImage('assets/images/o.png')),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
