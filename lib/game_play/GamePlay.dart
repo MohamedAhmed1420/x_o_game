@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:x_o_game/game_play/widgets/widgetPlay.dart';
 
 import '../core/AppColors.dart';
 
@@ -60,25 +61,26 @@ class Gameplay extends StatelessWidget {
                           child:
                           Row(
                             children: [
-                              Expanded(child: SizedBox(height: 68,width: 68,child: Image.asset("assets/images/x.png",))),
-                              VerticalDivider(),
-                              Expanded(child:   SizedBox(width: 68,height: 68,child: Image.asset("assets/images/x.png"))),
-                              VerticalDivider(),
-                              Expanded(child: SizedBox(width: 68,height: 68,child: Image.asset("assets/images/x.png"))),
+                              Expanded(child: SizedBox(height: 68,width: 68,child: WidgetPlay(play: ""))),
+                              VerticalDivider(color: AppColors.black),
+                              Expanded(child:   SizedBox(width: 68,height: 68,child:  WidgetPlay(play: ""))),
+                              VerticalDivider(color: AppColors.black),
+                              Expanded(child: SizedBox(width: 68,height: 68,child:  WidgetPlay(play: ""))),
 
                             ],
                           ),
                         ),
-                        Divider(height: 0,),
+                        Divider(height: 0,color: AppColors.black
+                          ,),
                         Expanded(
                           child:
                           Row(
                             children: [
-                              Expanded(child: SizedBox(height: 68,width: 68,child: Image.asset("assets/images/x.png",))),
-                              VerticalDivider(),
-                              Expanded(child:   SizedBox(width: 68,height: 68,child: Image.asset("assets/images/x.png"))),
-                              VerticalDivider(),
-                              Expanded(child: SizedBox(width: 68,height: 68,child: Image.asset("assets/images/x.png"))),
+                              Expanded(child: SizedBox(height: 68,width: 68,child: WidgetPlay(play: ""))),
+                              VerticalDivider(color: AppColors.black),
+                              Expanded(child:   SizedBox(width: 68,height: 68,child:  WidgetPlay(play: ""))),
+                              VerticalDivider(color: AppColors.black),
+                              Expanded(child: SizedBox(width: 68,height: 68,child:  WidgetPlay(play: ""))),
 
                             ],
                           ),
@@ -88,11 +90,11 @@ class Gameplay extends StatelessWidget {
                           child:
                           Row(
                             children: [
-                              Expanded(child: SizedBox(height: 68,width: 68,child: Image.asset("assets/images/x.png",))),
-                              VerticalDivider(),
-                              Expanded(child:   SizedBox(width: 68,height: 68,child: Image.asset("assets/images/x.png"))),
-                              VerticalDivider(),
-                              Expanded(child: SizedBox(width: 68,height: 68,child: Image.asset("assets/images/x.png"))),
+                              Expanded(child: SizedBox(height: 68,width: 68,child: WidgetPlay(play: ""))),
+                              VerticalDivider(color: AppColors.black),
+                              Expanded(child:   SizedBox(width: 68,height: 68,child:  WidgetPlay(play: ""))),
+                              VerticalDivider(color: AppColors.black),
+                              Expanded(child: SizedBox(width: 68,height: 68,child:  WidgetPlay(play: ""))),
 
                             ],
                           ),
