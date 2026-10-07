@@ -55,7 +55,7 @@ class StartScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Gameplay(),
+                                builder: (context) => Gameplay(isXPlay: true,),
                               ),
                             );
                           },
@@ -77,7 +77,7 @@ class StartScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Gameplay(),
+                                builder: (context) => Gameplay(isXPlay: false,),
                               ),
                             );
                           },
